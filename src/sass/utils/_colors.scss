@@ -1,0 +1,72 @@
+// Colors
+$red: #FF4136;
+$orange: #FF851B;
+$yellow: #FFDC00;
+$green: #2ECC40;
+$blue: #0074D9;
+$pink: #e60c85d9;
+$purple: #B10DC9;
+$navy: #34495e;
+$aqua: #7FDBFF;
+$teal: #39CCCC;
+$olive: #3D9970;
+$lime: #01FF70;
+$maroon: #85144b;
+$black: #000;
+$softblue: #edf0f3;
+
+// Shades
+$almost-black: #333;
+$dark: #666;
+$grey: #e5e5e5;
+$light: #f9f9f9;
+$white: #fff;
+$trans: transparent;
+$halfwhite: rgba(white, 0.5);
+$halfblack: rgba(black, 0.5);
+
+// Semantics
+$brand: $blue;
+$primary: $blue;
+$secondary: $light;
+$success: $green;
+$info: $teal;
+$warning: $yellow;
+$error: $red;
+
+// Color collection for creating util classes
+$colors: (
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "green": $green,
+  "blue": $blue,
+  "pink": $pink,
+  "purple": $purple,
+  "navy": $navy,
+  "aqua": $aqua,
+  "teal": $teal,
+  "maroon": $maroon,
+  "lime": $lime,
+  "olive": $olive,
+  "white": $white,
+  "light": $light,
+  "grey": $grey,
+  "dark": $dark,
+  "almost-black": $almost-black,
+  "black": $black,
+  "brand": $brand,
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "error": $error
+);
+
+@each $class, $color in $colors {
+  .bg-#{$class} { background: $color; }
+  .fill-#{$class} { fill: $color; }
+  .bdr-#{$class} { border: 1px solid $color; }
+  .#{$class} { color: $color; }
+}

@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+.bg-red {
+  background: #FF4136; }
+
+.fill-red {
+  fill: #FF4136; }
+
+.bdr-red {
+  border: 1px solid #FF4136; }
+
+.red {
+  color: #FF4136; }
+
+.bg-orange {
+  background: #FF851B; }
+
+.fill-orange {
+  fill: #FF851B; }
+
+.bdr-orange {
+  border: 1px solid #FF851B; }
+
+.orange {
+  color: #FF851B; }
+
+.bg-yellow {
+  background: #FFDC00; }
+
+.fill-yellow {
+  fill: #FFDC00; }
+
+.bdr-yellow {
+  border: 1px solid #FFDC00; }
+
+.yellow {
+  color: #FFDC00; }
+
+.bg-green {
+  background: #2ECC40; }
+
+.fill-green {
+  fill: #2ECC40; }
+
+.bdr-green {
+  border: 1px solid #2ECC40; }
+
+.green {
+  color: #2ECC40; }
+
+.bg-blue {
+  background: #0074D9; }
+
+.fill-blue {
+  fill: #0074D9; }
+
+.bdr-blue {
+  border: 1px solid #0074D9; }
+
+.blue {
+  color: #0074D9; }
+
+.bg-pink {
+  background: #e60c85d9; }
+
+.fill-pink {
+  fill: #e60c85d9; }
+
+.bdr-pink {
+  border: 1px solid #e60c85d9; }
+
+.pink {
+  color: #e60c85d9; }
+
+.bg-purple {
+  background: #B10DC9; }
+
+.fill-purple {
+  fill: #B10DC9; }
+
+.bdr-purple {
+  border: 1px solid #B10DC9; }
+
+.purple {
+  color: #B10DC9; }
+
+.bg-navy {
+  background: #34495e; }
+
+.fill-navy {
+  fill: #34495e; }
+
+.bdr-navy {
+  border: 1px solid #34495e; }
+
+.navy {
+  color: #34495e; }
+
+.bg-aqua {
+  background: #7FDBFF; }
+
+.fill-aqua {
+  fill: #7FDBFF; }
+
+.bdr-aqua {
+  border: 1px solid #7FDBFF; }
+
+.aqua {
+  color: #7FDBFF; }
+
+.bg-teal {
+  background: #39CCCC; }
+
+.fill-teal {
+  fill: #39CCCC; }
+
+.bdr-teal {
+  border: 1px solid #39CCCC; }
+
+.teal {
+  color: #39CCCC; }
+
+.bg-maroon {
+  background: #85144b; }
+
+.fill-maroon {
+  fill: #85144b; }
+
+.bdr-maroon {
+  border: 1px solid #85144b; }
+
+.maroon {
+  color: #85144b; }
+
+.bg-lime {
+  background: #01FF70; }
+
+.fill-lime {
+  fill: #01FF70; }
+
+.bdr-lime {
+  border: 1px solid #01FF70; }
+
+.lime {
+  color: #01FF70; }
+
+.bg-olive {
+  background: #3D9970; }
+
+.fill-olive {
+  fill: #3D9970; }
+
+.bdr-olive {
+  border: 1px solid #3D9970; }
+
+.olive {
+  color: #3D9970; }
+
+.bg-white {
+  background: #fff; }
+
+.fill-white {
+  fill: #fff; }
+
+.bdr-white {
+  border: 1px solid #fff; }
+
+.white {
+  color: #fff; }
+
+.bg-light {
+  background: #f9f9f9; }
+
+.fill-light {
+  fill: #f9f9f9; }
+
+.bdr-light {
+  border: 1px solid #f9f9f9; }
+
+.light {
+  color: #f9f9f9; }
+
+.bg-grey {
+  background: #e5e5e5; }
+
+.fill-grey {
+  fill: #e5e5e5; }
+
+.bdr-grey {
+  border: 1px solid #e5e5e5; }
+
+.grey {
+  color: #e5e5e5; }
+
+.bg-dark {
+  background: #666; }
+
+.fill-dark {
+  fill: #666; }
+
+.bdr-dark {
+  border: 1px solid #666; }
+
+.dark {
+  color: #666; }
+
+.bg-almost-black {
+  background: #333; }
+
+.fill-almost-black {
+  fill: #333; }
+
+.bdr-almost-black {
+  border: 1px solid #333; }
+
+.almost-black {
+  color: #333; }
+
+.bg-black {
+  background: #000; }
+
+.fill-black {
+  fill: #000; }
+
+.bdr-black {
+  border: 1px solid #000; }
+
+.black {
+  color: #000; }
+
+.bg-brand {
+  background: #0074D9; }
+
+.fill-brand {
+  fill: #0074D9; }
+
+.bdr-brand {
+  border: 1px solid #0074D9; }
+
+.brand {
+  color: #0074D9; }
+
+.bg-primary {
+  background: #0074D9; }
+
+.fill-primary {
+  fill: #0074D9; }
+
+.bdr-primary {
+  border: 1px solid #0074D9; }
+
+.primary {
+  color: #0074D9; }
+
+.bg-secondary {
+  background: #f9f9f9; }
+
+.fill-secondary {
+  fill: #f9f9f9; }
+
+.bdr-secondary {
+  border: 1px solid #f9f9f9; }
+
+.secondary {
+  color: #f9f9f9; }
+
+.bg-success {
+  background: #2ECC40; }
+
+.fill-success {
+  fill: #2ECC40; }
+
+.bdr-success {
+  border: 1px solid #2ECC40; }
+
+.success {
+  color: #2ECC40; }
+
+.bg-info {
+  background: #39CCCC; }
+
+.fill-info {
+  fill: #39CCCC; }
+
+.bdr-info {
+  border: 1px solid #39CCCC; }
+
+.info {
+  color: #39CCCC; }
+
+.bg-warning {
+  background: #FFDC00; }
+
+.fill-warning {
+  fill: #FFDC00; }
+
+.bdr-warning {
+  border: 1px solid #FFDC00; }
+
+.warning {
+  color: #FFDC00; }
+
+.bg-error {
+  background: #FF4136; }
+
+.fill-error {
+  fill: #FF4136; }
+
+.bdr-error {
+  border: 1px solid #FF4136; }
+
+.error {
+  color: #FF4136; }
+
+body {
+  background: #f9f9f9; }
+
+span[role='debug'] {
+  display: block;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; }
+  @media (min-width: 1024px) {
+    span[role='debug'] {
+      border-top: 5px solid #2ECC40; } }
+  @media (max-width: 1024px) {
+    span[role='debug'] {
+      border-top: 5px solid #FFDC00; } }
+  @media (max-width: 500px) {
+    span[role='debug'] {
+      border-top: 5px solid #FF4136; } }
+
+hr {
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 2.5rem 0; }
+
+#app-container {
+  display: flex;
+  min-height: 100vh; }
+  #app-container #app-sidenav,
+  #app-container #app-content {
+    flex: 0 0 auto; }
+  #app-container #app-content {
+    flex: 1 1 auto; }
+
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.875rem;
+  color: #000;
+  line-height: 1.625rem; }

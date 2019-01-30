@@ -1,0 +1,38 @@
+body {
+	background: $light;
+}
+
+// Responsive helper - DEBUG ONLY
+span[role='debug'] {
+  display: block;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  @include mq('lg') { border-top: 5px solid $green; }
+  @include mq('md') { border-top: 5px solid $yellow; }
+  @include mq('sm') { border-top: 5px solid $red; }
+}
+
+hr {
+	border: none;
+	border-bottom: 1px solid $grey;
+	margin: rem(40) 0;
+}
+
+// Layout
+#app-container {
+  display: flex;
+  min-height: 100vh;
+
+  #app-sidenav,
+  #app-content {
+    flex: 0 0 auto;
+  }
+  #app-sidenav {
+    // See _side-navigation.scss
+  }
+  #app-content {
+    flex: 1 1 auto;
+  }
+}
