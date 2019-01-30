@@ -1,2 +1,8 @@
-(ns cljstyleguide.buttons
+(ns cljstyleguide.sections.buttons
     (:require [reagent.core :as reagent :refer [atom]]))
+
+(defn View
+  "Main view for this section"
+  []
+  [:section
+   [:h1 "Buttons"]])

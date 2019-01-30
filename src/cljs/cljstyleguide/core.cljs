@@ -3,7 +3,20 @@
               [reagent.session :as session]
               [reitit.frontend :as reitit]
               [clerk.core :as clerk]
-              [accountant.core :as accountant]))
+              [accountant.core :as accountant]
+              [cljstyleguide.sections.colors :as colors]
+              [cljstyleguide.sections.typography :as typography]
+              [cljstyleguide.sections.buttons :as buttons]
+              [cljstyleguide.sections.layout :as layout]
+              [cljstyleguide.sections.lists :as lists]
+              [cljstyleguide.sections.data :as data]
+              [cljstyleguide.sections.forms :as forms]
+              [cljstyleguide.sections.navigation :as navigation]
+              [cljstyleguide.sections.notifications :as notifications]
+              [cljstyleguide.sections.panels :as panels]
+              [cljstyleguide.sections.tables :as tables]
+              [cljstyleguide.sections.modals :as modals]
+              [cljstyleguide.sections.slats :as slats]))
 
 ;; -------------------------
 ;; Routes
@@ -11,10 +24,20 @@
 (def router
   (reitit/router
    [["/" :index]
-    ["/items"
-     ["" :items]
-     ["/:item-id" :item]]
-    ["/about" :about]]))
+    ["/about" :about]
+    ["/colors" :colors]
+    ["/typography" :typography]
+    ["/layout" :layout]
+    ["/buttons" :buttons]
+    ["/forms" :forms]
+    ["/tables" :tables]
+    ["/lists" :lists]
+    ["/slats" :slats]
+    ["/navigation" :navigation]
+    ["/panels" :panels]
+    ["/notifications" :notifications]
+    ["/data" :data]
+    ["/modals" :modals]]))
 
 (defn path-for [route & [params]]
   (if params
@@ -30,34 +53,25 @@
     [:span.main
      [:h1 "Welcome to cljstyleguide"]
      [:ul
-      [:li [:a {:href (path-for :items)} "Items of cljstyleguide"]]
+      [:li [:a {:href (path-for :colors)} "Colors"]]
+      [:li [:a {:href (path-for :typography)} "Typography"]]
+      [:li [:a {:href (path-for :layout)} "Layout"]]
+      [:li [:a {:href (path-for :tables)} "Tables"]]
+      [:li [:a {:href (path-for :lists)} "Lists"]]
+      [:li [:a {:href (path-for :forms)} "Forms"]]
+      [:li [:a {:href (path-for :slats)} "Slats"]]
+      [:li [:a {:href (path-for :panels)} "Panels"]]
+      [:li [:a {:href (path-for :notifications)} "Notifications"]]
+      [:li [:a {:href (path-for :navigation)} "Navigation"]]
+      [:li [:a {:href (path-for :modals)} "Modals"]]
+      [:li [:a {:href (path-for :data)} "Data"]]
+
       [:li [:a {:href "/borken/link"} "Borken link"]]]]))
-
-
-
-(defn items-page []
-  (fn []
-    [:span.main
-     [:h1 "The items of cljstyleguide"]
-     [:ul (map (fn [item-id]
-                 [:li {:name (str "item-" item-id) :key (str "item-" item-id)}
-                  [:a {:href (path-for :item {:item-id item-id})} "Item: " item-id]])
-               (range 1 60))]]))
-
-
-(defn item-page []
-  (fn []
-    (let [routing-data (session/get :route)
-          item (get-in routing-data [:route-params :item-id])]
-      [:span.main
-       [:h1 (str "Item " item " of cljstyleguide")]
-       [:p [:a {:href (path-for :items)} "Back to the list of items"]]])))
-
 
 (defn about-page []
   (fn [] [:span.main
-          [:h1 "About cljstyleguide"]]))
-
+          [:h1 "About cljstyleguide"]
+          [:p "details soon..."]]))
 
 ;; -------------------------
 ;; Translate routes -> page components
@@ -66,9 +80,19 @@
   (case route
     :index #'home-page
     :about #'about-page
-    :items #'items-page
-    :item #'item-page))
-
+    :buttons #'buttons/View
+    :colors #'colors/View
+    :typography #'typography/View
+    :layout #'layout/View
+    :forms #'forms/View
+    :tables #'tables/View
+    :lists #'lists/View
+    :slats #'slats/View
+    :navigation #'navigation/View
+    :notifications #'notifications/View
+    :panels #'panels/View
+    :data #'data/View
+    :modals #'modals/View))
 
 ;; -------------------------
 ;; Page mounting component
@@ -78,7 +102,8 @@
     (let [page (:current-page (session/get :route))]
       [:div
        [:header
-        [:p [:a {:href (path-for :index)} "Home"] " | "
+        [:p
+         [:a {:href (path-for :index)} "Home"] " | "
          [:a {:href (path-for :about)} "About cljstyleguide"]]]
        [page]
        [:footer
