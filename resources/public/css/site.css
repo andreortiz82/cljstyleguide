@@ -379,14 +379,20 @@ h5 {
   font-size: 1.125rem;
   font-weight: 400; }
 
-p.lead {
+p.lead,
+blockquote.lead {
   font-size: 1.125rem;
   line-height: 2.25rem; }
 
-p.subtle {
+p.subtle,
+blockquote.subtle {
   font-size: 0.875rem;
   color: #666;
   line-height: 1.25rem; }
+
+blockquote {
+  border-left: 1px solid #e5e5e5;
+  padding-left: 0.625rem; }
 
 code {
   color: #e60c85d9;
@@ -398,14 +404,13 @@ code {
   padding: 0.3125rem;
   font-size: 0.75rem;
   color: #fff;
-  line-height: 0.625rem;
-  background: #666; }
+  line-height: 0.625rem; }
 
 .flex {
   display: flex;
   flex-direction: row; }
   .flex .box {
-    flex: 0 0 auto; }
+    flex: 0 1 auto; }
   .flex.column {
     flex-direction: column; }
 

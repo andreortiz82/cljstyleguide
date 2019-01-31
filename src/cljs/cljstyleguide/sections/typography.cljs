@@ -47,8 +47,8 @@
 
 (defn paragraphs []
   [:article
+    [:h2 "Paragraphs"]
     [:div
-     [:h2 "Paragraphs"]
      [:h4 "Lead"]
      [:p.lead (fake/text)]
      [:code (str "[:p.lead \"value\"]")]]
@@ -217,7 +217,21 @@
        [:code
         (str [:span.badge.bg-error])]]]]]])
 
-(defn quotes [])
+(defn quotes []
+  [:article
+    [:h2 "Blockquotes"]
+    [:div
+     [:h4 "Lead"]
+     [:blockquote.lead (fake/text)]
+     [:code (str "[:blockquote.lead \"value\"]")]]
+    [:div
+     [:h4 "Normal"]
+     [:blockquote (fake/text)]
+     [:code (str "[:blockquote \"value\"]")]]
+    [:div
+     [:h4 "Subtle"]
+     [:blockquote.subtle (fake/text)]
+     [:code (str "[:blockquote.subtle \"value\"]")]]])
 
 (defn View
   "Main view for this section"
