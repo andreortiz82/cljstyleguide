@@ -1,9 +1,67 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 html,
 body {
 	font-family: 'Open Sans', sans-serif;
-	font-size: rem(14);
 	color: $black;
-  line-height: rem(26);
+	line-height: rem(26);
+}
+
+// Text formatting
+.bold { font-weight: 700 }
+.italic { font-style: italic; }
+.underline { text-decoration: underline; }
+.strike { text-decoration: line-through; }
+.uppercase { text-transform: uppercase; }
+.downcase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+
+hr {
+	border: none;
+	border-bottom: 1px solid $grey;
+	margin: rem(40) 0;
+}
+
+// Headings
+$heading-sizes: (
+	"h1" : $h1,
+	"h2" : $h2,
+	"h3" : $h3,
+	"h4" : $h4,
+	"h5" : $h5
+);
+
+@each $selector, $size in $heading-sizes {
+	#{$selector} {
+		font-size: rem($size);
+		font-weight: $normal;
+	}
+}
+
+// Paragraphs
+p.lead {
+	font-size: rem($lead);
+	line-height: rem(36);
+}
+
+p.subtle {
+	font-size: rem($subtle);
+	color: $dark;
+	line-height: rem(20);
+}
+
+// Code
+code {
+	color: $pink;
+	background: $light;
+	padding: rem(5);
+}
+
+// Badges
+.badge {
+	@include border-radius;
+	padding: rem(5);
+	font-size: rem($badge-font-size);
+	color: $white;
+	line-height: rem(10);
 }

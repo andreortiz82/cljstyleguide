@@ -1,0 +1,17 @@
+#app {
+  background: $light;
+  padding: rem($application-spacing);
+
+  .application-wrapper {
+    width: 95%;
+    margin: rem($application-spacing) auto;
+    background: $white;
+    padding: rem($application-spacing);
+
+    section.cljstyleguide-section {
+      article {
+        margin-bottom: rem($application-spacing);
+      }
+    }
+  }
+}

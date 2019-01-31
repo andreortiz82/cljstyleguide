@@ -16,7 +16,8 @@
               [cljstyleguide.sections.panels :as panels]
               [cljstyleguide.sections.tables :as tables]
               [cljstyleguide.sections.modals :as modals]
-              [cljstyleguide.sections.slats :as slats]))
+              [cljstyleguide.sections.slats :as slats]
+              [cljstyleguide.ui.navigation :as menu]))
 
 ;; -------------------------
 ;; Routes
@@ -52,6 +53,7 @@
   (fn []
     [:span.main
      [:h1 "Welcome to cljstyleguide"]
+     (menu/Menu)
      [:ul
       [:li [:a {:href (path-for :colors)} "Colors"]]
       [:li [:a {:href (path-for :typography)} "Typography"]]
@@ -100,7 +102,7 @@
 (defn current-page []
   (fn []
     (let [page (:current-page (session/get :route))]
-      [:div
+      [:div.application-wrapper
        [:header
         [:p
          [:a {:href (path-for :index)} "Home"] " | "

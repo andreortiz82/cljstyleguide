@@ -5,4 +5,4 @@
   "Main view for this section"
   []
   [:section
-   [:h1 "Lists here"]])
+   [:h1 "Lists"]])

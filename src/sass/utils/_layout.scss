@@ -1,0 +1,26 @@
+.flex {
+  display: flex;
+  flex-direction: row;
+
+  .box { flex: 0 0 auto; }
+
+  &.column { flex-direction: column; }
+}
+
+.inline-block { display: inline-block; }
+.block { display: block; }
+
+$spaceamounts: (0, 10, 20, 30, 40, 50);
+
+@each $space in $spaceamounts {
+  .m-#{$space} { margin: rem($space); }
+  .mt-#{$space} { margin-top: rem($space); }
+  .mb-#{$space} { margin-bottom: rem($space); }
+  .ml-#{$space} { margin-left: rem($space); }
+  .mr-#{$space} { margin-right: rem($space); }
+  .p-#{$space} { padding: rem($space); }
+  .pt-#{$space} { padding-top: rem($space); }
+  .pb-#{$space} { padding-bottom: rem($space); }
+  .pl-#{$space} { padding-left: rem($space); }
+  .pr-#{$space} { padding-right: rem($space); }
+}

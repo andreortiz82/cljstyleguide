@@ -15,7 +15,9 @@
    [:meta {:charset "utf-8"}]
    [:meta {:name "viewport"
            :content "width=device-width, initial-scale=1"}]
-   (include-css (if (env :dev) "/css/site.css" "/css/site.min.css"))])
+   (include-css
+    "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    (if (env :dev) "/css/site.css" "/css/site.min.css"))])
 
 (defn loading-page []
   (html5
