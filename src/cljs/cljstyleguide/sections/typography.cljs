@@ -48,8 +48,8 @@
 
 (defn paragraphs []
   [:article
+    [:h2 "Paragraphs"]
     [:div
-     [:h2 "Paragraphs"]
      [:h4 "Lead"]
      [:p.lead (fake/text)]
      [:code (str "[:p.lead \"value\"]")]]
@@ -160,26 +160,9 @@
                  [:li {:key index} (str "List item: " index)])
                (range 5))])]]]]]])
 
-(def badge-collection ["default"
-                       "dark"
-                       "red"
-                       "orange"
-                       "yellow"
-                       "green"
-                       "blue"
-                       "pink"
-                       "purple"])
 (defn labels-badges
   []
-  (let [badge-collection ["default"
-                           "dark"
-                           "red"
-                           "orange"
-                           "yellow"
-                           "green"
-                           "blue"
-                           "pink"
-                           "purple"]]
+  (let [badge-collection ["default" "dark" "red" "orange" "yellow" "green" "blue" "pink" "purple"]]
     [:article
      [:table
       [:thead
@@ -202,7 +185,21 @@
                     badge-collection)]]]))
 
 
-(defn quotes [])
+(defn quotes []
+  [:article
+    [:h2 "Blockquotes"]
+    [:div
+     [:h4 "Lead"]
+     [:blockquote.lead (fake/text)]
+     [:code (str "[:blockquote.lead \"value\"]")]]
+    [:div
+     [:h4 "Normal"]
+     [:blockquote (fake/text)]
+     [:code (str "[:blockquote \"value\"]")]]
+    [:div
+     [:h4 "Subtle"]
+     [:blockquote.subtle (fake/text)]
+     [:code (str "[:blockquote.subtle \"value\"]")]]])
 
 (defn View
   "Main view for this section"

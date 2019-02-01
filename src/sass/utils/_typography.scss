@@ -38,16 +38,23 @@ $heading-sizes: (
 	}
 }
 
-// Paragraphs
-p.lead {
+// Paragraphs + Blockquotes
+p.lead,
+blockquote.lead {
 	font-size: rem($lead);
 	line-height: rem(36);
 }
 
-p.subtle {
+p.subtle,
+blockquote.subtle {
 	font-size: rem($subtle);
 	color: $dark;
 	line-height: rem(20);
+}
+
+blockquote {
+  border-left: 1px solid $grey;
+  padding-left: rem(10);
 }
 
 // Code
@@ -66,7 +73,7 @@ code {
 	line-height: rem(10);
 	background: $light;
 	color: $dark;
-	
+
 	@each $class, $color in $colors {
 		&.#{$class} {
 			background: $color;
