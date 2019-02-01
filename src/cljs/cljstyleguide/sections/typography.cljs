@@ -1,6 +1,7 @@
 (ns cljstyleguide.sections.typography
     (:require
       [reagent.core :as reagent :refer [atom]]
+      [clojure.string :as str]
       [talltale.core :as fake]))
 
 (defn headings []
@@ -159,63 +160,47 @@
                  [:li {:key index} (str "List item: " index)])
                (range 5))])]]]]]])
 
-(defn labels-badges []
-  [:article
-   [:table
-    [:thead
-     [:tr
-      [:th "Badge"]
-      [:th "Example"]
-      [:th "Code"]]]
-    [:tbody
-     [:tr
-      [:td "Default"]
-      [:td
-       [:span.badge.mr-10.inline-block 3]
-       [:span.badge.mr-10.inline-block "default"]]
-      [:td
-       [:code
-        (str [:span.badge])]]]
-     [:tr
-      [:td "Primary"]
-      [:td
-       [:span.badge.bg-primary.mr-10.inline-block 3]
-       [:span.badge.bg-primary.mr-10.inline-block "default"]]
-      [:td
-       [:code
-        (str [:span.badge.bg-primary])]]]
-     [:tr
-      [:td "Success"]
-      [:td
-       [:span.badge.bg-success.mr-10.inline-block 3]
-       [:span.badge.bg-success.mr-10.inline-block "default"]]
-      [:td
-       [:code
-        (str [:span.badge.bg-success])]]]
-     [:tr
-      [:td "Warning"]
-      [:td
-       [:span.badge.bg-warning.mr-10.inline-block 3]
-       [:span.badge.bg-warning.mr-10.inline-block "default"]]
-      [:td
-       [:code
-        (str [:span.badge.bg-warning])]]]
-     [:tr
-      [:td "Info"]
-      [:td
-       [:span.badge.bg-info.mr-10.inline-block 3]
-       [:span.badge.bg-info.mr-10.inline-block "default"]]
-      [:td
-       [:code
-        (str [:span.badge.bg-info])]]]
-     [:tr
-      [:td "Error"]
-      [:td
-       [:span.badge.bg-error.mr-10.inline-block 3]
-       [:span.badge.bg-error.mr-10.inline-block "default"]]
-      [:td
-       [:code
-        (str [:span.badge.bg-error])]]]]]])
+(def badge-collection ["default"
+                       "dark"
+                       "red"
+                       "orange"
+                       "yellow"
+                       "green"
+                       "blue"
+                       "pink"
+                       "purple"])
+(defn labels-badges
+  []
+  (let [badge-collection ["default"
+                           "dark"
+                           "red"
+                           "orange"
+                           "yellow"
+                           "green"
+                           "blue"
+                           "pink"
+                           "purple"]]
+    [:article
+     [:table
+      [:thead
+       [:tr
+        [:th "Badge"]
+        [:th "Example"]
+        [:th "Code"]]]
+      [:tbody
+       (map-indexed (fn [badge-index badge-type]
+                      [:tr {:key badge-index}
+                       [:td (str/capitalize badge-type)]
+                       [:td
+                        (map (fn [index]
+                               [:span.badge.mr-10 {:key index :class badge-type} (fake/city)])
+                             (range 5))]
+                       [:td
+                        [:code
+                         (str [:span.badge {:class badge-type} (fake/city)])]]])
+
+                    badge-collection)]]]))
+
 
 (defn quotes [])
 

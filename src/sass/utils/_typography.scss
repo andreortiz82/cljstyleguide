@@ -64,4 +64,13 @@ code {
 	font-size: rem($badge-font-size);
 	color: $white;
 	line-height: rem(10);
+	background: $light;
+	color: $dark;
+	
+	@each $class, $color in $colors {
+		&.#{$class} {
+			background: $color;
+			color: $white;
+		}
+	}
 }
