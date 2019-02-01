@@ -4,65 +4,51 @@
       [clojure.string :as str]
       [talltale.core :as fake]))
 
-(defn headings []
-  [:article
-   [:h2 "Headings"]
-   [:table
-    [:thead
-     [:tr
-      [:th "Selector"]
-      [:th "Size (using rem() function)"]
-      [:th "Font Weight"]
-      [:th "Example"]]]
-    [:tbody
-     [:tr
-      [:td [:h1 "h1: Main heading"]]
-      [:td [:h1 "36"]]
-      [:td [:h1 "400"]]
-      [:td
-       [:code (str "[:h1 \"value\"]")]]]
-     [:tr
-      [:td [:h2 "h2: Subpage title"]]
-      [:td [:h2 "32"]]
-      [:td [:h2 "400"]]
-      [:td
-       [:code (str "[:h2 \"value\"]")]]]
-     [:tr
-      [:td [:h3 "h3: Section header"]]
-      [:td [:h3 "26"]]
-      [:td [:h3 "400"]]
-      [:td
-       [:code (str "[:h3 \"value\"]")]]]
-     [:tr
-      [:td [:h4 "h4: Article heading"]]
-      [:td [:h4 "22"]]
-      [:td [:h4 "400"]]
-      [:td
-       [:code (str "[:h4 \"value\"]")]]]
-     [:tr
-      [:td [:h5 "h5: Lead heading"]]
-      [:td [:h5 "18"]]
-      [:td [:h5 "400"]]
-      [:td
-       [:code (str "[:h5 \"value\"]")]]]]]])
+(defn headings
+  "Example sections"
+  []
+  (let [headings-collection [{:type "h1" :size "36" :weight "400" :dom [:h1 (fake/city)]}
+                             {:type "h2" :size "32" :weight "400" :dom [:h2 (fake/city)]}
+                             {:type "h3" :size "26" :weight "400" :dom [:h3 (fake/city)]}
+                             {:type "h4" :size "22" :weight "400" :dom [:h4 (fake/city)]}
+                             {:type "h5" :size "18" :weight "400" :dom [:h5 (fake/city)]}]]
+    [:article
+     [:h2 "Headings"]
+     [:table
+      [:thead
+       [:tr
+        [:th "Selector"]
+        [:th "Size (using rem() function)"]
+        [:th "Font Weight"]
+        [:th "Example"]]]
+      [:tbody
+       (map-indexed (fn [index heading]
+                      [:tr {:key index}
+                       [:td (:dom heading)]
+                       [:td (:size heading)]
+                       [:td (:weight heading)]
+                       [:td
+                        [:code (str (:dom heading))]]])
+                    headings-collection)]]]))
 
-(defn paragraphs []
-  [:article
-    [:h2 "Paragraphs"]
-    [:div
-     [:h4 "Lead"]
-     [:p.lead (fake/text)]
-     [:code (str "[:p.lead \"value\"]")]]
-    [:div
-     [:h4 "Normal"]
-     [:p (fake/text)]
-     [:code (str "[:p \"value\"]")]]
-    [:div
-     [:h4 "Subtle"]
-     [:p.subtle (fake/text)]
-     [:code (str "[:p.subtle \"value\"]")]]])
 
-(defn links []
+
+(defn paragraphs
+  "Example sections"
+  []
+  (let [paragraph-collection ["lead" "" "subtle"]]
+    [:article
+      [:h2 "Paragraphs"]
+      (map-indexed (fn [index type]
+                     [:div {:key index}
+                       [:h4 (str/capitalize type)]
+                       [:p {:class type} (fake/text)]
+                       [:code (str [:p {:class type} "text here"])]])
+                   paragraph-collection)]))
+
+(defn links
+  "Example sections"
+  []
   [:article
    [:table
     [:thead
@@ -75,44 +61,28 @@
       [:td
        [:code (str "[:a {:href <PATH>} \"value\"]")]]]]]])
 
-(defn text-formatting []
-  [:article
-   [:table
-    [:thead
-     [:tr
-      [:th "Format"]
-      [:th "Utility Class"]]]
-    [:tbody
-     [:tr
-      [:td [:span.bold "I am bold"]]
-      [:td
-       [:code ".bold"]]]
-     [:tr
-      [:td [:span.italic "I am italic"]]
-      [:td
-       [:code ".italic"]]]
-     [:tr
-      [:td [:span.uppercase "I am uppercase"]]
-      [:td
-       [:code ".uppercase"]]]
-     [:tr
-      [:td [:span.downcase "I am downcase"]]
-      [:td
-       [:code ".downcase"]]]
-     [:tr
-      [:td [:span.underline "I am underlined"]]
-      [:td
-       [:code ".underline"]]]
-     [:tr
-      [:td [:span.capitalize "I am capitalized"]]
-      [:td
-       [:code ".capitalize"]]]
-     [:tr
-      [:td [:span.strike "I am striked"]]
-      [:td
-       [:code ".strike"]]]]]])
+(defn text-formatting
+  "Example sections"
+  []
+  (let [formatting-collection ["bold" "italic" "uppercase" "downcase" "underline" "capitalize" "strike"]]
+    [:article
+     [:table
+      [:thead
+       [:tr
+        [:th "Format"]
+        [:th "Utility Class"]]]
+      [:tbody
+       (map-indexed (fn [index type]
+                      [:tr {:key index}
+                       [:td [:span {:class type} (str "I am " type)]]
+                       [:td
+                        [:code (str "." type)]]])
+                    formatting-collection)]]]))
 
-(defn lists []
+
+(defn lists
+  "Example sections"
+  []
   [:article
    [:table
     [:thead
@@ -161,6 +131,7 @@
                (range 5))])]]]]]])
 
 (defn labels-badges
+  "Example sections"
   []
   (let [badge-collection ["default" "dark" "red" "orange" "yellow" "green" "blue" "pink" "purple"]]
     [:article
@@ -176,7 +147,9 @@
                        [:td (str/capitalize badge-type)]
                        [:td
                         (map (fn [index]
-                               [:span.badge.mr-10 {:key index :class badge-type} (fake/city)])
+                               [:span
+                                [:span.badge.mr-10 {:key (str "number-" index) :class badge-type} (rand-int 30)]
+                                [:span.badge.mr-10 {:key index :class badge-type} (fake/city)]])
                              (range 5))]
                        [:td
                         [:code
@@ -184,22 +157,22 @@
 
                     badge-collection)]]]))
 
-
-(defn quotes []
-  [:article
-    [:h2 "Blockquotes"]
-    [:div
-     [:h4 "Lead"]
-     [:blockquote.lead (fake/text)]
-     [:code (str "[:blockquote.lead \"value\"]")]]
-    [:div
-     [:h4 "Normal"]
-     [:blockquote (fake/text)]
-     [:code (str "[:blockquote \"value\"]")]]
-    [:div
-     [:h4 "Subtle"]
-     [:blockquote.subtle (fake/text)]
-     [:code (str "[:blockquote.subtle \"value\"]")]]])
+(defn quotes
+  "Example sections"
+  []
+  (let [quotes-collection ["lead" "" "subtle"]]
+    [:article
+      [:h2 "Blockquotes"]
+      (map-indexed (fn [index type]
+                     [:div {:key index}
+                       [:h4 (str/capitalize type)]
+                       [:blockquote {:class type}
+                        (fake/text)
+                        [:cite (fake/username)]]
+                       [:code (str [:blockquote {:class type}
+                                    "Tacos are delicious!"
+                                    [:cite "Everyone"]])]])
+                   quotes-collection)]))
 
 (defn View
   "Main view for this section"
