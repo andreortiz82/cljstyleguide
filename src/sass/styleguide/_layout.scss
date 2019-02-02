@@ -1,17 +1,31 @@
 #app {
   background: $light;
-  padding: rem($application-spacing);
 
-  .application-wrapper {
-    width: 95%;
-    margin: rem($application-spacing) auto;
+  #application-wrapper {
     background: $white;
-    padding: rem($application-spacing);
+    display: flex;
 
-    section.cljstyleguide-section {
-      article {
-        margin-bottom: rem($application-spacing);
+    #styleguide-content,
+    #styleguide-navigation {
+      flex: 0 0 auto;
+      width: 20%;
+      min-width: rem(220);
+    }
+
+    #styleguide-content {
+      flex: 1 1 auto;
+
+      section.cljstyleguide-section {
+        padding: rem(40);
+
+        article {
+          margin-bottom: rem($application-spacing);
+        }
       }
+    }
+
+    #styleguide-navigation {
+      background: $light;
     }
   }
 }

@@ -41,7 +41,7 @@
       [:h2 "Paragraphs"]
       (map-indexed (fn [index type]
                      [:div {:key index}
-                       [:h4 (str/capitalize type)]
+                       [:h3 (str/capitalize type)]
                        [:p {:class type} (fake/text)]
                        [:code (str [:p {:class type} "text here"])]])
                    paragraph-collection)]))
@@ -165,7 +165,7 @@
       [:h2 "Blockquotes"]
       (map-indexed (fn [index type]
                      [:div {:key index}
-                       [:h4 (str/capitalize type)]
+                       [:h3 (str/capitalize type)]
                        [:blockquote {:class type}
                         (fake/text)
                         [:cite (fake/username)]]

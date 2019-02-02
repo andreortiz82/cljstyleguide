@@ -1635,15 +1635,23 @@ table {
     background-color: #fff; }
 
 #app {
-  background: #f9f9f9;
-  padding: 1.25rem; }
-  #app .application-wrapper {
-    width: 95%;
-    margin: 1.25rem auto;
+  background: #f9f9f9; }
+  #app #application-wrapper {
     background: #fff;
-    padding: 1.25rem; }
-    #app .application-wrapper section.cljstyleguide-section article {
-      margin-bottom: 1.25rem; }
+    display: flex; }
+    #app #application-wrapper #styleguide-content,
+    #app #application-wrapper #styleguide-navigation {
+      flex: 0 0 auto;
+      width: 20%;
+      min-width: 13.75rem; }
+    #app #application-wrapper #styleguide-content {
+      flex: 1 1 auto; }
+      #app #application-wrapper #styleguide-content section.cljstyleguide-section {
+        padding: 2.5rem; }
+        #app #application-wrapper #styleguide-content section.cljstyleguide-section article {
+          margin-bottom: 1.25rem; }
+    #app #application-wrapper #styleguide-navigation {
+      background: #f9f9f9; }
 
 .swatch-group {
   margin-bottom: 1.25rem; }

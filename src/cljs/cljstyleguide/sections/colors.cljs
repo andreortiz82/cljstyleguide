@@ -50,7 +50,7 @@
    [:tbody
      (map-indexed (fn [index color]
                     [:tr {:key index}
-                     [:td {:width "300px"}
+                     [:td {:width "200px"}
                       [:div.swatch {:class (str "bg-" color)} color]
                       [:div.swatch {:class (str "bg-" color "-10")} (str color "-10")]
                       [:div.swatch {:class (str "bg-" color "-20")} (str color "-20")]
@@ -69,8 +69,9 @@
 (defn View
   "Main view for this section"
   []
-  [:section
+  [:section.cljstyleguide-section
    [:h1 "Colors Collections"]
+   [:p.lead "The color system can be used to create a color theme that reflects your brand or style."]
    [:h2 "Grey Scale"]
    (swatch-group grey-scale-collection)
 

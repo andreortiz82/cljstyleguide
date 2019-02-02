@@ -4,5 +4,6 @@
 (defn View
   "Main view for this section"
   []
-  [:section
-   [:h1 "Layouts + Grid"]])
+  [:section.cljstyleguide-section
+   [:h1 "Layouts + Grid"]
+   [:p.lead "Flexbox-powered grid, which you can use instead of the traditional float grid."]])

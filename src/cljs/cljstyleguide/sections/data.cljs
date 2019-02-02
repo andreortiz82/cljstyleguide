@@ -4,5 +4,5 @@
 (defn View
   "Main view for this section"
   []
-  [:section
+  [:section.cljstyleguide-section
    [:h1 "Data"]])
