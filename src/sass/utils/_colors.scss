@@ -4,7 +4,7 @@ $orange: #FF851B;
 $yellow: #FFDC00;
 $green: #2ECC40;
 $blue: #0074D9;
-$pink: #e60c85d9;
+$pink: #ef336c;
 $purple: #B10DC9;
 $navy: #34495e;
 $aqua: #7FDBFF;
@@ -65,8 +65,29 @@ $colors: (
 );
 
 @each $class, $color in $colors {
-  .bg-#{$class} { background: $color; }
-  .fill-#{$class} { fill: $color; }
-  .bdr-#{$class} { border: 1px solid $color; }
-  .#{$class} { color: $color; }
+  // Backgound colors
+  @if (type-of($color) == 'color'){
+    .bg-#{$class} { background: $color; }
+    .bg-#{$class}-10 { background: lighten($color, 10%); }
+    .bg-#{$class}-20 { background: lighten($color, 20%); }
+    .bg-#{$class}-30 { background: lighten($color, 30%); }
+
+    // Fill colors (for SVG)
+    .fill-#{$class} { fill: $color; }
+    .fill-#{$class}-10 { fill: lighten($color, 10%); }
+    .fill-#{$class}-20 { fill: lighten($color, 20%); }
+    .fill-#{$class}-30 { fill: lighten($color, 30%); }
+
+    // Border colors
+    .bdr-#{$class} { border: 1px solid $color; }
+    .bdr-#{$class}-10 { border: 1px solid lighten($color, 10%); }
+    .bdr-#{$class}-20 { border: 1px solid lighten($color, 20%); }
+    .bdr-#{$class}-30 { border: 1px solid lighten($color, 30%); }
+
+    // Text Colors
+    .#{$class} { color: $color; }
+    .#{$class}-10 { color: lighten($color, 10%); }
+    .#{$class}-20 { color: lighten($color, 20%); }
+    .#{$class}-30 { color: lighten($color, 30%); }
+  }
 }

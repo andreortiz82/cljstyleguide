@@ -1,0 +1,7 @@
+.swatch-group {
+  margin-bottom: rem($application-spacing);
+  .swatch {
+    padding: rem(5);
+    font-family: $mono;
+  }
+}
