@@ -24,3 +24,14 @@ $spaceamounts: (0, 10, 20, 30, 40, 50);
   .pl-#{$space} { padding-left: rem($space); }
   .pr-#{$space} { padding-right: rem($space); }
 }
+
+$grid-columns: 12;
+.row {
+  display: flex;
+
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      width: percentage($i / $grid-columns);
+    }
+  }
+}

@@ -4,28 +4,27 @@
   #application-wrapper {
     background: $white;
     display: flex;
-
+    align-items: stretch;
+    
     #styleguide-content,
     #styleguide-navigation {
       flex: 0 0 auto;
-      width: 20%;
+      width: 15%;
       min-width: rem(220);
     }
 
     #styleguide-content {
       flex: 1 1 auto;
 
+      // Each section based on Navigation
       section.cljstyleguide-section {
         padding: rem(40);
 
-        article {
-          margin-bottom: rem($application-spacing);
-        }
+        // Section Sub-sections
+        article { margin-bottom: rem($application-spacing); }
       }
     }
 
-    #styleguide-navigation {
-      background: $light;
-    }
+    #styleguide-navigation { background: $light; }
   }
 }

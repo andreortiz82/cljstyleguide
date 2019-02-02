@@ -148,7 +148,6 @@
                        [:td
                         (map (fn [index]
                                [:span
-                                [:span.badge.mr-10 {:key (str "number-" index) :class badge-type} (rand-int 30)]
                                 [:span.badge.mr-10 {:key index :class badge-type} (fake/city)]])
                              (range 5))]
                        [:td

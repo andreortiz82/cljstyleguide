@@ -1,5 +1,4 @@
 table {
-  background: $light;
   color: $black;
   width: 100%;
   text-align: left;
@@ -18,8 +17,8 @@ table {
     tr {
       th {
         font-weight: $normal;
-        color: $dark;
         border-bottom: 1px solid $grey;
+        color: $dark;
       }
     }
   }
