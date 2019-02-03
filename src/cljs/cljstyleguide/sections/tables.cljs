@@ -6,6 +6,7 @@
 
 (def tableDisabled (reagent/atom false))
 (def pageYOffset (reagent/atom 0))
+(def active-cell-data (reagent/atom nil))
 
 (defn dismiss-cell-focus []
   (reset! tableDisabled false)
@@ -16,19 +17,34 @@
 
 (defn cell-click-handler
   [event row cell]
-  (reset! tableDisabled true)
-  (-> js/document
-    (.-body)
-    (.classList.add "no-scroll"))
-  (js/console.log (str "Value: " (cell row))))
+  (let [xPos (-> event .-clientX)
+        yPos (-> event .-clientY)]
+    (reset! tableDisabled true)
+    (reset! active-cell-data {:data row
+                              :key cell
+                              :x xPos
+                              :y yPos})
+    (-> js/document
+      (.-body)
+      (.classList.add "no-scroll"))))
+
+(defn inline-cell-form
+  [{:keys [data key x y]}]
+  (let [value (key data)]
+    [:div.edit-cell-widget {:on-key-press dismiss-cell-focus
+                            :style {:top y :left x}}
+     [:div.field
+      [:input {:autoFocus true :type "text" :defaultValue value}]]
+     (js/console.log data key x y)]))
 
 (defn simple-table
   [collection]
   (let [topPos 170 ; Make dynamic
         currentPos (- @pageYOffset topPos)]
-    [:article.table-container
+    [:article.table-container {:role "table-component"}
      (when @tableDisabled
-       [:div.table-active-overlay {:on-click dismiss-cell-focus}])
+       [:div.table-active-overlay
+        (inline-cell-form @active-cell-data)])
      [:table.advanced
       [:thead {:class (when (> currentPos topPos) "sticky") :style {:top currentPos}}
        [:tr
@@ -41,7 +57,6 @@
                        (map-indexed (fn [idx td]
                                       [:td {:key idx
                                             :on-click #(cell-click-handler % tr td)}
-
                                        (str (td tr))])
                                     (keys tr))])
                     collection)]]]))
