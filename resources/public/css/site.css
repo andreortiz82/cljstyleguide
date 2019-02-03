@@ -1263,6 +1263,9 @@ span[role='debug'] {
     span[role='debug'] {
       border-top: 5px solid #FF4136; } }
 
+body.no-scroll {
+  overflow: hidden; }
+
 html,
 body {
   font-family: 'Open Sans', sans-serif;
@@ -1427,8 +1430,6 @@ code {
   flex-direction: row; }
   .flex .box {
     flex: 0 1 auto; }
-  .flex.column {
-    flex-direction: column; }
 
 .inline-block {
   display: inline-block; }
@@ -1617,7 +1618,8 @@ code {
   padding-right: 3.125rem; }
 
 .row {
-  display: flex; }
+  display: flex;
+  flex-direction: row; }
   .row .col-1 {
     width: 8.33333333%; }
   .row .col-2 {
@@ -1643,22 +1645,82 @@ code {
   .row .col-12 {
     width: 100%; }
 
+.table-active-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 100; }
+
 table {
   color: #000;
   width: 100%;
-  text-align: left; }
+  text-align: left;
+  font-size: 0.75rem; }
   table thead tr th, table thead tr td,
   table tbody tr th,
   table tbody tr td,
   table tfoot tr th,
   table tfoot tr td {
-    padding: 0.3125rem; }
+    padding: 0.3125rem;
+    cursor: pointer; }
   table thead tr th {
     font-weight: 400;
     border-bottom: 1px solid #e5e5e5;
-    color: #666; }
+    color: #666;
+    font-weight: bold;
+    padding: 0.625rem 0.3125rem; }
   table tbody tr td {
     background-color: #fff; }
+
+.table-container {
+  overflow: auto; }
+
+.table-container table.advanced {
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+  .table-container table.advanced thead,
+  .table-container table.advanced tbody,
+  .table-container table.advanced tfoot {
+    flex: 0 0 auto;
+    width: 100%; }
+    .table-container table.advanced thead tr,
+    .table-container table.advanced tbody tr,
+    .table-container table.advanced tfoot tr {
+      display: flex; }
+      .table-container table.advanced thead tr th, .table-container table.advanced thead tr td,
+      .table-container table.advanced tbody tr th,
+      .table-container table.advanced tbody tr td,
+      .table-container table.advanced tfoot tr th,
+      .table-container table.advanced tfoot tr td {
+        flex: 1 1 auto;
+        min-width: 12.5rem;
+        overflow: hidden; }
+        .table-container table.advanced thead tr th:hover, .table-container table.advanced thead tr td:hover,
+        .table-container table.advanced tbody tr th:hover,
+        .table-container table.advanced tbody tr td:hover,
+        .table-container table.advanced tfoot tr th:hover,
+        .table-container table.advanced tfoot tr td:hover {
+          background: #f9f9f9; }
+  .table-container table.advanced thead {
+    transition: all 0.5s; }
+    .table-container table.advanced thead.sticky {
+      box-shadow: 0 1px 5px 0 rgba(229, 229, 229, 0.5);
+      -webkit-box-shadow: 0 1px 5px 0 rgba(229, 229, 229, 0.5);
+      -moz-box-shadow: 0 1px 5px 0 rgba(229, 229, 229, 0.5);
+      position: absolute;
+      left: 0; }
+      .table-container table.advanced thead.sticky tr th {
+        background: #fff; }
+  .table-container table.advanced tbody tr td {
+    background-color: #fff;
+    height: 2.5rem;
+    overflow: hidden; }
+    .table-container table.advanced tbody tr td.active {
+      background: #0074D9; }
 
 #app {
   background: #f9f9f9; }

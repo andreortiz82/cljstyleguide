@@ -3,16 +3,12 @@
   flex-direction: row;
 
   .box { flex: 0 1 auto; }
-
-  &.column { flex-direction: column; }
 }
 
 .inline-block { display: inline-block; }
 .block { display: block; }
 
-$spaceamounts: (0, 10, 20, 30, 40, 50);
-
-@each $space in $spaceamounts {
+@each $space in $margin-and-padding-breaks {
   .m-#{$space} { margin: rem($space); }
   .mt-#{$space} { margin-top: rem($space); }
   .mb-#{$space} { margin-bottom: rem($space); }
@@ -25,9 +21,9 @@ $spaceamounts: (0, 10, 20, 30, 40, 50);
   .pr-#{$space} { padding-right: rem($space); }
 }
 
-$grid-columns: 12;
 .row {
   display: flex;
+  flex-direction: row;
 
   @for $i from 1 through $grid-columns {
     .col-#{$i} {

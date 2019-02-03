@@ -9,3 +9,8 @@ span[role='debug'] {
   @include mq('md') { border-top: 5px solid $yellow; }
   @include mq('sm') { border-top: 5px solid $red; }
 }
+
+// This class disables scrolling
+body.no-scroll {
+  overflow: hidden;
+}
