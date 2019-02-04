@@ -147,8 +147,8 @@
                        [:td (str/capitalize badge-type)]
                        [:td
                         (map (fn [index]
-                               [:span
-                                [:span.badge.mr-10 {:key index :class badge-type} (fake/city)]])
+                               [:span {:key index}
+                                [:span.badge.mr-10 {:class badge-type} (fake/city)]])
                              (range 5))]
                        [:td
                         [:code
