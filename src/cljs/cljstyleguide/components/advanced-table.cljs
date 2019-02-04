@@ -2,11 +2,26 @@
   (:require
     [reagent.core :as reagent :refer [atom]]))
 
-(def tableDisabled (reagent/atom false))
-(def pageYOffset (reagent/atom 0))
+(def table-disabled (reagent/atom false))
+(def page-y-offset (reagent/atom 0))
 (def active-row (reagent/atom 0))
 (def active-cell (reagent/atom 0))
 (def active-cell-data (reagent/atom nil))
+
+; Table Sorting
+(def sort-props (reagent/atom {:sort-val :id :ascending true}))
+
+(defn update-sort-value [new-val]
+  (if (= new-val (:sort-val @sort-props))
+    (swap! sort-props update-in [:ascending] not)
+    (swap! sort-props assoc :ascending true))
+  (swap! sort-props assoc :sort-val new-val))
+
+(defn sorted-contents [table-contents]
+  (let [sorted-contents (sort-by (:sort-val @sort-props) table-contents)]
+    (if (:ascending @sort-props)
+      sorted-contents
+      (rseq sorted-contents))))
 
 (defn change-active-cell
   [{:keys [tri tdi] :as coordinates}]
@@ -27,7 +42,7 @@
       [:input {:autoFocus true :type "text" :defaultValue value}]]]))
 
 (defn dismiss-cell-focus []
-  (reset! tableDisabled false)
+  (reset! table-disabled false)
   (reset! active-cell-data nil)
   (-> js/document
     (.-body)
@@ -55,8 +70,8 @@
 (defn cell-click-handler
   [event row cell tr-index td-index]
   (let [position (-> event .-target .getBoundingClientRect)]
-    (reset! tableDisabled true)
-    (reset! tableDisabled true)
+    (reset! table-disabled true)
+    (reset! table-disabled true)
     (reset! active-cell-data {:data row
                               :key cell
                               :x (.-left position)
@@ -70,28 +85,29 @@
   []
   (reagent/create-class {:component-will-unmount (fn []
                                                     (.removeEventListener js/window "keydown" #(keydown-handler %) false)
-                                                    (.removeEventListener js/window "scroll" #(reset! pageYOffset (.-scrollY js/window)) true))
+                                                    (.removeEventListener js/window "scroll" #(reset! page-y-offset (.-scrollY js/window)) true))
                           :component-did-mount (fn []
                                                  (.addEventListener js/window "keydown" #(keydown-handler %) false)
-                                                 (.addEventListener js/window "scroll" #(reset! pageYOffset (.-scrollY js/window)) true)
+                                                 (.addEventListener js/window "scroll" #(reset! page-y-offset (.-scrollY js/window)) true)
                                                  (change-active-cell nil))
                           :render (fn [] (js/console.log "listeners active"))}))
 
 (listeners)
 
 (defn MatrixTable
-  [collection]
+  [data]
   (let [topPos 170 ; Make dynamic
-        currentPos (- @pageYOffset topPos)]
+        collection (take 20 data)
+        currentPos (- @page-y-offset topPos)]
     [:article.table-container {:role "table-component"}
-     (when @tableDisabled
+     (when @table-disabled
        [:div.table-active-overlay {:on-click dismiss-cell-focus}
         (inline-cell-form @active-cell-data)])
      [:table.advanced
       [:thead {:class (when (> currentPos topPos) "sticky") :style {:top currentPos}}
        [:tr
         (map-indexed (fn [index th]
-                      [:th {:key index} (str th)])
+                      [:th {:key index :on-click #(update-sort-value th)} (str th)])
                      (keys (first collection)))]]
       [:tbody
        (map-indexed (fn [tr-index tr]
@@ -102,4 +118,4 @@
                                                         (cell-click-handler event tr td tr-index td-index))}
                                        (str (td tr))])
                                     (keys tr))])
-                    collection)]]]))
+                    (sorted-contents collection))]]]))

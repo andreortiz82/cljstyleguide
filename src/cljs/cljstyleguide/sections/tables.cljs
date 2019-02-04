@@ -11,7 +11,6 @@
   (reagent/create-class {
                          :component-did-mount (fn []
                                                 (state/api "patients"))
-
                          :render (fn []
                                   [:section.cljstyleguide-section
                                    [:h1 "Tables"]
