@@ -1738,6 +1738,35 @@ table {
     height: 2.5rem;
     overflow: hidden; }
 
+.split-list-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  border: 1px solid #e5e5e5; }
+  .split-list-container .list,
+  .split-list-container .details {
+    width: 50%;
+    border: none; }
+  .split-list-container .details {
+    border-left: 1px solid #e5e5e5; }
+    .split-list-container .details > div {
+      padding: 1.25rem; }
+
+.list {
+  border: 1px solid #e5e5e5;
+  font-size: 0.875rem; }
+  .list div.list-item {
+    padding: 0.625rem;
+    border-bottom: 1px solid #e5e5e5;
+    cursor: pointer; }
+    .list div.list-item:last-child {
+      border-bottom: none; }
+    .list div.list-item:hover {
+      background: #f9f9f9; }
+    .list div.list-item.active {
+      background: #0074D9;
+      color: #fff; }
+
 #app {
   background: #f9f9f9; }
   #app #application-wrapper {
