@@ -12,6 +12,7 @@
      [:li [:a {:href (path-for :about)} "About"]]
      [:li [:a {:href (path-for :colors)} "Colors"]]
      [:li [:a {:href (path-for :typography)} "Typography"]]
+     [:li [:a {:href (path-for :buttons)} "Buttons"]]
      [:li [:a {:href (path-for :layout)} "Layout"]]
      [:li [:a {:href (path-for :tables)} "Tables"]]
      [:li [:a {:href (path-for :lists)} "Lists"]]

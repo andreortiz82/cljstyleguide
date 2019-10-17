@@ -1,3 +1,4 @@
+.l-flex,
 .flex {
   display: flex;
   flex-direction: row;
@@ -6,7 +7,12 @@
 }
 
 .inline-block { display: inline-block; }
+.l-inline-flex { display: inline-flex; }
 .block { display: block; }
+
+@each $space in ("flex-start", "flex-end") {
+  
+}
 
 @each $space in $margin-and-padding-breaks {
   .m-#{$space} { margin: rem($space); }

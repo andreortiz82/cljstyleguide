@@ -1425,14 +1425,19 @@ code {
     background: #ff4a46;
     color: #fff; }
 
+.l-flex,
 .flex {
   display: flex;
   flex-direction: row; }
+  .l-flex .box,
   .flex .box {
     flex: 0 1 auto; }
 
 .inline-block {
   display: inline-block; }
+
+.l-inline-flex {
+  display: inline-flex; }
 
 .block {
   display: block; }
