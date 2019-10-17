@@ -17,6 +17,7 @@
               [cljstyleguide.sections.tables :as tables]
               [cljstyleguide.sections.modals :as modals]
               [cljstyleguide.sections.slats :as slats]
+              [cljstyleguide.sections.kitchensink :refer [KitchenSink]]
               [cljstyleguide.ui.navigation :as menu]))
 
 ;; -------------------------
@@ -53,7 +54,8 @@
   (fn []
     [:section.cljstyleguide-section
      [:h1 "Welcome to cljstyleguide"]
-     [:p.lead "A styleguide for CLJS projects. More details soon..."]]))
+     [:p.lead "A styleguide for CLJS projects. More details soon..."]
+     [KitchenSink]]))
 
 
 (defn about-page []

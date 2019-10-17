@@ -20,7 +20,8 @@
                   :exclusions [org.clojure/tools.reader]]
                  [talltale "0.2.11"]
                  [com.andrewmcveigh/cljs-time "0.5.2"]
-                 [cljs-ajax "0.7.5"]]
+                 [cljs-ajax "0.7.5"]
+                 [re-com "2.6.0"]]
 
   :plugins [[lein-environ "1.1.0"]
             [lein-cljsbuild "1.1.7"]

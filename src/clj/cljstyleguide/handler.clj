@@ -18,6 +18,7 @@
    [:link {:rel "icon" :href "/favicons/favicon.ico"}]
    (include-css
     "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     (if (env :dev) "/css/site.css" "/css/site.min.css"))])
 
 (defn loading-page []
