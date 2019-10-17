@@ -1,243 +1,243 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 .bg-red {
-  background: #FF4136; }
+  background: #ff4a46; }
 
 .bg-red-10 {
-  background: #ff7169; }
+  background: #ff7c79; }
 
 .bg-red-20 {
-  background: #ffa19c; }
+  background: #ffaeac; }
 
 .bg-red-30 {
-  background: #ffd2cf; }
+  background: #ffe0df; }
 
 .fill-red {
-  fill: #FF4136; }
+  fill: #ff4a46; }
 
 .fill-red-10 {
-  fill: #ff7169; }
+  fill: #ff7c79; }
 
 .fill-red-20 {
-  fill: #ffa19c; }
+  fill: #ffaeac; }
 
 .fill-red-30 {
-  fill: #ffd2cf; }
+  fill: #ffe0df; }
 
 .bdr-red {
-  border: 1px solid #FF4136; }
+  border: 1px solid #ff4a46; }
 
 .bdr-red-10 {
-  border: 1px solid #ff7169; }
+  border: 1px solid #ff7c79; }
 
 .bdr-red-20 {
-  border: 1px solid #ffa19c; }
+  border: 1px solid #ffaeac; }
 
 .bdr-red-30 {
-  border: 1px solid #ffd2cf; }
+  border: 1px solid #ffe0df; }
 
 .red {
-  color: #FF4136; }
+  color: #ff4a46; }
 
 .red-10 {
-  color: #ff7169; }
+  color: #ff7c79; }
 
 .red-20 {
-  color: #ffa19c; }
+  color: #ffaeac; }
 
 .red-30 {
-  color: #ffd2cf; }
+  color: #ffe0df; }
 
 .bg-orange {
-  background: #FF851B; }
+  background: #ffa148; }
 
 .bg-orange-10 {
-  background: #ffa04e; }
+  background: #ffbb7b; }
 
 .bg-orange-20 {
-  background: #ffbc81; }
+  background: #ffd5ae; }
 
 .bg-orange-30 {
-  background: #ffd7b4; }
+  background: #fff0e1; }
 
 .fill-orange {
-  fill: #FF851B; }
+  fill: #ffa148; }
 
 .fill-orange-10 {
-  fill: #ffa04e; }
+  fill: #ffbb7b; }
 
 .fill-orange-20 {
-  fill: #ffbc81; }
+  fill: #ffd5ae; }
 
 .fill-orange-30 {
-  fill: #ffd7b4; }
+  fill: #fff0e1; }
 
 .bdr-orange {
-  border: 1px solid #FF851B; }
+  border: 1px solid #ffa148; }
 
 .bdr-orange-10 {
-  border: 1px solid #ffa04e; }
+  border: 1px solid #ffbb7b; }
 
 .bdr-orange-20 {
-  border: 1px solid #ffbc81; }
+  border: 1px solid #ffd5ae; }
 
 .bdr-orange-30 {
-  border: 1px solid #ffd7b4; }
+  border: 1px solid #fff0e1; }
 
 .orange {
-  color: #FF851B; }
+  color: #ffa148; }
 
 .orange-10 {
-  color: #ffa04e; }
+  color: #ffbb7b; }
 
 .orange-20 {
-  color: #ffbc81; }
+  color: #ffd5ae; }
 
 .orange-30 {
-  color: #ffd7b4; }
+  color: #fff0e1; }
 
 .bg-yellow {
-  background: #FFDC00; }
+  background: #ffc132; }
 
 .bg-yellow-10 {
-  background: #ffe333; }
+  background: #ffd065; }
 
 .bg-yellow-20 {
-  background: #ffea66; }
+  background: #ffe098; }
 
 .bg-yellow-30 {
-  background: #fff199; }
+  background: #ffefcb; }
 
 .fill-yellow {
-  fill: #FFDC00; }
+  fill: #ffc132; }
 
 .fill-yellow-10 {
-  fill: #ffe333; }
+  fill: #ffd065; }
 
 .fill-yellow-20 {
-  fill: #ffea66; }
+  fill: #ffe098; }
 
 .fill-yellow-30 {
-  fill: #fff199; }
+  fill: #ffefcb; }
 
 .bdr-yellow {
-  border: 1px solid #FFDC00; }
+  border: 1px solid #ffc132; }
 
 .bdr-yellow-10 {
-  border: 1px solid #ffe333; }
+  border: 1px solid #ffd065; }
 
 .bdr-yellow-20 {
-  border: 1px solid #ffea66; }
+  border: 1px solid #ffe098; }
 
 .bdr-yellow-30 {
-  border: 1px solid #fff199; }
+  border: 1px solid #ffefcb; }
 
 .yellow {
-  color: #FFDC00; }
+  color: #ffc132; }
 
 .yellow-10 {
-  color: #ffe333; }
+  color: #ffd065; }
 
 .yellow-20 {
-  color: #ffea66; }
+  color: #ffe098; }
 
 .yellow-30 {
-  color: #fff199; }
+  color: #ffefcb; }
 
 .bg-green {
-  background: #2ECC40; }
+  background: #38cc84; }
 
 .bg-green-10 {
-  background: #54d964; }
+  background: #61d69d; }
 
 .bg-green-20 {
-  background: #7ee289; }
+  background: #89e1b6; }
 
 .bg-green-30 {
-  background: #a8ebaf; }
+  background: #b2ebcf; }
 
 .fill-green {
-  fill: #2ECC40; }
+  fill: #38cc84; }
 
 .fill-green-10 {
-  fill: #54d964; }
+  fill: #61d69d; }
 
 .fill-green-20 {
-  fill: #7ee289; }
+  fill: #89e1b6; }
 
 .fill-green-30 {
-  fill: #a8ebaf; }
+  fill: #b2ebcf; }
 
 .bdr-green {
-  border: 1px solid #2ECC40; }
+  border: 1px solid #38cc84; }
 
 .bdr-green-10 {
-  border: 1px solid #54d964; }
+  border: 1px solid #61d69d; }
 
 .bdr-green-20 {
-  border: 1px solid #7ee289; }
+  border: 1px solid #89e1b6; }
 
 .bdr-green-30 {
-  border: 1px solid #a8ebaf; }
+  border: 1px solid #b2ebcf; }
 
 .green {
-  color: #2ECC40; }
+  color: #38cc84; }
 
 .green-10 {
-  color: #54d964; }
+  color: #61d69d; }
 
 .green-20 {
-  color: #7ee289; }
+  color: #89e1b6; }
 
 .green-30 {
-  color: #a8ebaf; }
+  color: #b2ebcf; }
 
 .bg-blue {
-  background: #0074D9; }
+  background: #2292e2; }
 
 .bg-blue-10 {
-  background: #0d8eff; }
+  background: #4fa8e8; }
 
 .bg-blue-20 {
-  background: #40a6ff; }
+  background: #7cbeee; }
 
 .bg-blue-30 {
-  background: #73beff; }
+  background: #a9d5f4; }
 
 .fill-blue {
-  fill: #0074D9; }
+  fill: #2292e2; }
 
 .fill-blue-10 {
-  fill: #0d8eff; }
+  fill: #4fa8e8; }
 
 .fill-blue-20 {
-  fill: #40a6ff; }
+  fill: #7cbeee; }
 
 .fill-blue-30 {
-  fill: #73beff; }
+  fill: #a9d5f4; }
 
 .bdr-blue {
-  border: 1px solid #0074D9; }
+  border: 1px solid #2292e2; }
 
 .bdr-blue-10 {
-  border: 1px solid #0d8eff; }
+  border: 1px solid #4fa8e8; }
 
 .bdr-blue-20 {
-  border: 1px solid #40a6ff; }
+  border: 1px solid #7cbeee; }
 
 .bdr-blue-30 {
-  border: 1px solid #73beff; }
+  border: 1px solid #a9d5f4; }
 
 .blue {
-  color: #0074D9; }
+  color: #2292e2; }
 
 .blue-10 {
-  color: #0d8eff; }
+  color: #4fa8e8; }
 
 .blue-20 {
-  color: #40a6ff; }
+  color: #7cbeee; }
 
 .blue-30 {
-  color: #73beff; }
+  color: #a9d5f4; }
 
 .bg-pink {
   background: #ef336c; }
@@ -288,52 +288,52 @@
   color: #fac1d2; }
 
 .bg-purple {
-  background: #B10DC9; }
+  background: #9997ea; }
 
 .bg-purple-10 {
-  background: #d519f0; }
+  background: #c3c1f3; }
 
 .bg-purple-20 {
-  background: #dd49f3; }
+  background: #ececfb; }
 
 .bg-purple-30 {
-  background: #e679f6; }
+  background: white; }
 
 .fill-purple {
-  fill: #B10DC9; }
+  fill: #9997ea; }
 
 .fill-purple-10 {
-  fill: #d519f0; }
+  fill: #c3c1f3; }
 
 .fill-purple-20 {
-  fill: #dd49f3; }
+  fill: #ececfb; }
 
 .fill-purple-30 {
-  fill: #e679f6; }
+  fill: white; }
 
 .bdr-purple {
-  border: 1px solid #B10DC9; }
+  border: 1px solid #9997ea; }
 
 .bdr-purple-10 {
-  border: 1px solid #d519f0; }
+  border: 1px solid #c3c1f3; }
 
 .bdr-purple-20 {
-  border: 1px solid #dd49f3; }
+  border: 1px solid #ececfb; }
 
 .bdr-purple-30 {
-  border: 1px solid #e679f6; }
+  border: 1px solid white; }
 
 .purple {
-  color: #B10DC9; }
+  color: #9997ea; }
 
 .purple-10 {
-  color: #d519f0; }
+  color: #c3c1f3; }
 
 .purple-20 {
-  color: #dd49f3; }
+  color: #ececfb; }
 
 .purple-30 {
-  color: #e679f6; }
+  color: white; }
 
 .bg-navy {
   background: #34495e; }
@@ -912,100 +912,100 @@
   color: #4d4d4d; }
 
 .bg-brand {
-  background: #0074D9; }
+  background: #2292e2; }
 
 .bg-brand-10 {
-  background: #0d8eff; }
+  background: #4fa8e8; }
 
 .bg-brand-20 {
-  background: #40a6ff; }
+  background: #7cbeee; }
 
 .bg-brand-30 {
-  background: #73beff; }
+  background: #a9d5f4; }
 
 .fill-brand {
-  fill: #0074D9; }
+  fill: #2292e2; }
 
 .fill-brand-10 {
-  fill: #0d8eff; }
+  fill: #4fa8e8; }
 
 .fill-brand-20 {
-  fill: #40a6ff; }
+  fill: #7cbeee; }
 
 .fill-brand-30 {
-  fill: #73beff; }
+  fill: #a9d5f4; }
 
 .bdr-brand {
-  border: 1px solid #0074D9; }
+  border: 1px solid #2292e2; }
 
 .bdr-brand-10 {
-  border: 1px solid #0d8eff; }
+  border: 1px solid #4fa8e8; }
 
 .bdr-brand-20 {
-  border: 1px solid #40a6ff; }
+  border: 1px solid #7cbeee; }
 
 .bdr-brand-30 {
-  border: 1px solid #73beff; }
+  border: 1px solid #a9d5f4; }
 
 .brand {
-  color: #0074D9; }
+  color: #2292e2; }
 
 .brand-10 {
-  color: #0d8eff; }
+  color: #4fa8e8; }
 
 .brand-20 {
-  color: #40a6ff; }
+  color: #7cbeee; }
 
 .brand-30 {
-  color: #73beff; }
+  color: #a9d5f4; }
 
 .bg-primary {
-  background: #0074D9; }
+  background: #2292e2; }
 
 .bg-primary-10 {
-  background: #0d8eff; }
+  background: #4fa8e8; }
 
 .bg-primary-20 {
-  background: #40a6ff; }
+  background: #7cbeee; }
 
 .bg-primary-30 {
-  background: #73beff; }
+  background: #a9d5f4; }
 
 .fill-primary {
-  fill: #0074D9; }
+  fill: #2292e2; }
 
 .fill-primary-10 {
-  fill: #0d8eff; }
+  fill: #4fa8e8; }
 
 .fill-primary-20 {
-  fill: #40a6ff; }
+  fill: #7cbeee; }
 
 .fill-primary-30 {
-  fill: #73beff; }
+  fill: #a9d5f4; }
 
 .bdr-primary {
-  border: 1px solid #0074D9; }
+  border: 1px solid #2292e2; }
 
 .bdr-primary-10 {
-  border: 1px solid #0d8eff; }
+  border: 1px solid #4fa8e8; }
 
 .bdr-primary-20 {
-  border: 1px solid #40a6ff; }
+  border: 1px solid #7cbeee; }
 
 .bdr-primary-30 {
-  border: 1px solid #73beff; }
+  border: 1px solid #a9d5f4; }
 
 .primary {
-  color: #0074D9; }
+  color: #2292e2; }
 
 .primary-10 {
-  color: #0d8eff; }
+  color: #4fa8e8; }
 
 .primary-20 {
-  color: #40a6ff; }
+  color: #7cbeee; }
 
 .primary-30 {
-  color: #73beff; }
+  color: #a9d5f4; }
 
 .bg-secondary {
   background: #f9f9f9; }
@@ -1056,52 +1056,52 @@
   color: white; }
 
 .bg-success {
-  background: #2ECC40; }
+  background: #38cc84; }
 
 .bg-success-10 {
-  background: #54d964; }
+  background: #61d69d; }
 
 .bg-success-20 {
-  background: #7ee289; }
+  background: #89e1b6; }
 
 .bg-success-30 {
-  background: #a8ebaf; }
+  background: #b2ebcf; }
 
 .fill-success {
-  fill: #2ECC40; }
+  fill: #38cc84; }
 
 .fill-success-10 {
-  fill: #54d964; }
+  fill: #61d69d; }
 
 .fill-success-20 {
-  fill: #7ee289; }
+  fill: #89e1b6; }
 
 .fill-success-30 {
-  fill: #a8ebaf; }
+  fill: #b2ebcf; }
 
 .bdr-success {
-  border: 1px solid #2ECC40; }
+  border: 1px solid #38cc84; }
 
 .bdr-success-10 {
-  border: 1px solid #54d964; }
+  border: 1px solid #61d69d; }
 
 .bdr-success-20 {
-  border: 1px solid #7ee289; }
+  border: 1px solid #89e1b6; }
 
 .bdr-success-30 {
-  border: 1px solid #a8ebaf; }
+  border: 1px solid #b2ebcf; }
 
 .success {
-  color: #2ECC40; }
+  color: #38cc84; }
 
 .success-10 {
-  color: #54d964; }
+  color: #61d69d; }
 
 .success-20 {
-  color: #7ee289; }
+  color: #89e1b6; }
 
 .success-30 {
-  color: #a8ebaf; }
+  color: #b2ebcf; }
 
 .bg-info {
   background: #39CCCC; }
@@ -1152,100 +1152,100 @@
   color: #b3ebeb; }
 
 .bg-warning {
-  background: #FFDC00; }
+  background: #ffc132; }
 
 .bg-warning-10 {
-  background: #ffe333; }
+  background: #ffd065; }
 
 .bg-warning-20 {
-  background: #ffea66; }
+  background: #ffe098; }
 
 .bg-warning-30 {
-  background: #fff199; }
+  background: #ffefcb; }
 
 .fill-warning {
-  fill: #FFDC00; }
+  fill: #ffc132; }
 
 .fill-warning-10 {
-  fill: #ffe333; }
+  fill: #ffd065; }
 
 .fill-warning-20 {
-  fill: #ffea66; }
+  fill: #ffe098; }
 
 .fill-warning-30 {
-  fill: #fff199; }
+  fill: #ffefcb; }
 
 .bdr-warning {
-  border: 1px solid #FFDC00; }
+  border: 1px solid #ffc132; }
 
 .bdr-warning-10 {
-  border: 1px solid #ffe333; }
+  border: 1px solid #ffd065; }
 
 .bdr-warning-20 {
-  border: 1px solid #ffea66; }
+  border: 1px solid #ffe098; }
 
 .bdr-warning-30 {
-  border: 1px solid #fff199; }
+  border: 1px solid #ffefcb; }
 
 .warning {
-  color: #FFDC00; }
+  color: #ffc132; }
 
 .warning-10 {
-  color: #ffe333; }
+  color: #ffd065; }
 
 .warning-20 {
-  color: #ffea66; }
+  color: #ffe098; }
 
 .warning-30 {
-  color: #fff199; }
+  color: #ffefcb; }
 
 .bg-error {
-  background: #FF4136; }
+  background: #ff4a46; }
 
 .bg-error-10 {
-  background: #ff7169; }
+  background: #ff7c79; }
 
 .bg-error-20 {
-  background: #ffa19c; }
+  background: #ffaeac; }
 
 .bg-error-30 {
-  background: #ffd2cf; }
+  background: #ffe0df; }
 
 .fill-error {
-  fill: #FF4136; }
+  fill: #ff4a46; }
 
 .fill-error-10 {
-  fill: #ff7169; }
+  fill: #ff7c79; }
 
 .fill-error-20 {
-  fill: #ffa19c; }
+  fill: #ffaeac; }
 
 .fill-error-30 {
-  fill: #ffd2cf; }
+  fill: #ffe0df; }
 
 .bdr-error {
-  border: 1px solid #FF4136; }
+  border: 1px solid #ff4a46; }
 
 .bdr-error-10 {
-  border: 1px solid #ff7169; }
+  border: 1px solid #ff7c79; }
 
 .bdr-error-20 {
-  border: 1px solid #ffa19c; }
+  border: 1px solid #ffaeac; }
 
 .bdr-error-30 {
-  border: 1px solid #ffd2cf; }
+  border: 1px solid #ffe0df; }
 
 .error {
-  color: #FF4136; }
+  color: #ff4a46; }
 
 .error-10 {
-  color: #ff7169; }
+  color: #ff7c79; }
 
 .error-20 {
-  color: #ffa19c; }
+  color: #ffaeac; }
 
 .error-30 {
-  color: #ffd2cf; }
+  color: #ffe0df; }
 
 span[role='debug'] {
   display: block;
@@ -1255,13 +1255,13 @@ span[role='debug'] {
   z-index: 1000; }
   @media (min-width: 1024px) {
     span[role='debug'] {
-      border-top: 5px solid #2ECC40; } }
+      border-top: 5px solid #38cc84; } }
   @media (max-width: 1024px) {
     span[role='debug'] {
-      border-top: 5px solid #FFDC00; } }
+      border-top: 5px solid #ffc132; } }
   @media (max-width: 500px) {
     span[role='debug'] {
-      border-top: 5px solid #FF4136; } }
+      border-top: 5px solid #ff4a46; } }
 
 body.no-scroll {
   overflow: hidden; }
@@ -1347,25 +1347,25 @@ code {
   background: #f9f9f9;
   color: #666; }
   .badge.red {
-    background: #FF4136;
+    background: #ff4a46;
     color: #fff; }
   .badge.orange {
-    background: #FF851B;
+    background: #ffa148;
     color: #fff; }
   .badge.yellow {
-    background: #FFDC00;
+    background: #ffc132;
     color: #fff; }
   .badge.green {
-    background: #2ECC40;
+    background: #38cc84;
     color: #fff; }
   .badge.blue {
-    background: #0074D9;
+    background: #2292e2;
     color: #fff; }
   .badge.pink {
     background: #ef336c;
     color: #fff; }
   .badge.purple {
-    background: #B10DC9;
+    background: #9997ea;
     color: #fff; }
   .badge.navy {
     background: #34495e;
@@ -1404,25 +1404,25 @@ code {
     background: #000;
     color: #fff; }
   .badge.brand {
-    background: #0074D9;
+    background: #2292e2;
     color: #fff; }
   .badge.primary {
-    background: #0074D9;
+    background: #2292e2;
     color: #fff; }
   .badge.secondary {
     background: #f9f9f9;
     color: #fff; }
   .badge.success {
-    background: #2ECC40;
+    background: #38cc84;
     color: #fff; }
   .badge.info {
     background: #39CCCC;
     color: #fff; }
   .badge.warning {
-    background: #FFDC00;
+    background: #ffc132;
     color: #fff; }
   .badge.error {
-    background: #FF4136;
+    background: #ff4a46;
     color: #fff; }
 
 .flex {
@@ -1764,7 +1764,7 @@ table {
     .list div.list-item:hover {
       background: #f9f9f9; }
     .list div.list-item.active {
-      background: #0074D9;
+      background: #2292e2;
       color: #fff; }
 
 #app {
